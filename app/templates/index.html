@@ -29,10 +29,7 @@
 		</table>
 	</form>
 	{% for post in posts.items %}
-	<div><p> {{ post.author.nickname }} says: 
-		      <b>{{ post.body }}</b>
-		  </p>
-	</div>
+	{% include 'post.html' %}
 	{% endfor %}
 
 	{% if posts.has_prev %}

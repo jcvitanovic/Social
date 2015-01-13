@@ -20,6 +20,9 @@ class User(db.Model):
 								backref=db.backref('followers', lazy='dynamic'), 
 								lazy='dynamic')   
 
+	def sorted_posts(self):
+		return self.posts.order_by(Post.timestamp.desc())
+
 	def is_authenticated(self):
 		return True
 
