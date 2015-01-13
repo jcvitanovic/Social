@@ -1,2 +1,4 @@
 tmp/
-.db
+app.db
+test.db
+search.db
