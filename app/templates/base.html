@@ -25,6 +25,7 @@
 						<a class="brand" href="/">Social</a>
 						<ul class="nav">
 							<li><a href="{{ url_for('index')}}">Home</a></li>
+							<li><a href="{{ url_for('explore')}}">Explore</a>
 							{% if g.user.is_authenticated() %}
 							<li><a href="{{ url_for('user', nickname=g.user.nickname)}}">Your profile</a></li>
 							<li><a href="{{ url_for('logout') }}"> Logout </a></li>	

@@ -26,6 +26,14 @@ def index(page=1):
 							form=form,
 							posts=posts)
 
+@app.route('/explore/<int:page>', methods=['GET','POST'])
+@app.route('/expolore', methods=['GET', 'POST'])
+@login_required
+def explore(page=1):
+	#posts = user.sorted_posts().paginate(page, POSTS_PER_PAGE, False)
+	users = User.query.paginate(page, POSTS_PER_PAGE, False)
+	return render_template('list_users.html', users = users)
+
 @app.route('/login', methods=['GET', 'POST'])
 @oid.loginhandler
 def login():

@@ -26,6 +26,7 @@ ADMINS = ['servertest1004@gmail.com']
 
 #pagination
 POSTS_PER_PAGE = 3
+USERS_PER_PAGE = 3
 
 #full text search database
 WHOOSH_BASE = os.path.join(basedir, 'search.db')
